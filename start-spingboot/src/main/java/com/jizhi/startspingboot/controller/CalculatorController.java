@@ -24,5 +24,14 @@ public class CalculatorController {
         int sub = calculatorService.sub(num1, num2);
         return sub;
     }
+
+    @GetMapping("/div")
+    public String div(@PathParam("num1") int num1, @PathParam("num2") int num2) {
+        if (num2 == 0) {
+            return "num2 can't be 0";
+        }
+        int div = num1 / num2;
+        return String.valueOf(div);
+    }
 }
 
