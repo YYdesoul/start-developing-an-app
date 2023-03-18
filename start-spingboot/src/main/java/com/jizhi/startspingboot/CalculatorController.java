@@ -12,5 +12,6 @@ public class CalculatorController {
     public int add(@PathParam("num1") int num1, @PathParam("num2") int num2) {
         int sum = num1 + num2;
         return sum;
+
     }
 }
